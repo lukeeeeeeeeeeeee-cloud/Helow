@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Always</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Special+Elite&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video id="bgVideo" autoplay muted loop playsinline>
+    <source src="assets/background.mp4" type="video/mp4">
+  </video>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/dilaw-maki.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="overlay"></div>
+  <div class="rain"></div>
+  <div class="sparkles"></div>
+  <div class="film-grain"></div>
+  <div class="light-leak"></div>
+  <div id="flash"></div>
+  <div class="floating-words" id="floatingWords"></div>
+  <div id="petals"></div>
+
+  <section class="intro" id="intro">
+    <div class="intro-card">
+      <p class="small">A little surprise</p>
+      <h1>For you, always.</h1>
+      <p class="intro-message">Every memory has a soundtrack…<br>and somehow, ikaw akong favorite song nga never ko mag tired paminawon. ♡</p>
+      <button id="startBtn">Tap to Start</button>
+      <span>Tap first so the music can play.</span>
+    </div>
+  </section>
+
+  <main id="main" class="hidden">
+    <div class="music-player premium">
+      <div class="disc"></div>
+      <div class="track">
+        <strong>Dilaw - Maki</strong>
+        <p>favorite soundtrack</p>
+        <div class="wave"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="progress"><div id="progressBar"></div></div>
+      </div>
+      <button id="musicBtn">Pause</button>
+    </div>
+
+    <section class="hero">
+      <p class="small">Quietly, but surely...</p>
+      <h1 id="typeText"></h1>
+      <p class="subtitle">ikaw akong safe place.</p>
+      <button class="glow-btn" id="surpriseBtn">Click if you miss me ♡</button>
+    </section>
+
+    <section class="bouquets">
+      <div class="bouquet red">
+        <div class="flowers">🌹🌹🌹🌹<br>🌹🌹🌹🌹<br>🌹🌹🌹🌹</div>
+        <span>You are so loved.</span>
+      </div>
+      <div class="letter">
+        <h2>A little note for you ♡</h2>
+        <p>Thank you sa mga random talks, random laughs, ug sa mga moments nga wa nimo na realize pero naka comfort diay kaayo nako.</p>
+        <p>Dili man ko perfect, pero one thing I can promise is genuine akong intentions sa imoa — calm, soft, and real ganurn hihihi.</p>
+        <b>Basta No rush ha? I’ll stay at your pace. ♡</b>
+      </div>
+      <div class="bouquet pink">
+        <div class="flowers">🌷🌷🌷🌷<br>🌷🌷🌷🌷<br>🌷🌷🌷🌷</div>
+        <span>Thank you for being you.</span>
+      </div>
+    </section>
+
+    <section class="polaroids">
+      <div class="polaroid" data-msg="Wiwiwiw d masuko overtakan ha? hahah mastera oy."><img src="assets/photo1.jpg"><p>our random drives ♡</p></div>
+      <div class="polaroid" data-msg="Wiwiwiw d masuko overtakan ha? hahah mastera oy."><img src="assets/photo2.jpg"><p>our random drives ♡</p></div>
+      <div class="polaroid" data-msg="favorite kaayo nako nang mga moments nga wala kay awareness nga pretty kaayo ka (pero master kaayo ka mo tabon oy mabantayan ditso). may ghad! hahaah"><img src="assets/photo3.jpg"><p>pretty candid ♡</p></div>
+      <div class="polaroid" data-msg="Paha jud oy. unsaon nalang nako ani 😭."><img src="assets/photo4.jpg"><p>you + teddy ♡</p></div>
+      <div class="polaroid" data-msg="wa koy kalaban sa chicken ug samot nas pater... pero ikaw gihapon akong favorite tan-awon wiwiiw hahah. 😭"><img src="assets/photo5.jpg"><p>cute foodie moment ♡</p></div>
+      <div class="polaroid" data-msg="imong presence"><img src="assets/photo6.jpg"><p>safe place ♡</p></div>
+    </section>
+
+    <section class="memory">
+      <h2>Memory Unlocks</h2>
+      <div class="memory-grid">
+        <button class="memory-btn" data-msg="Favorite person detected. Heart says: ikaw ra jud gihapon.">Favorite Person</button>
+        <button class="memory-btn" data-msg="You don’t have to be perfect to be loved. You being you is already enough.">Soft Reminder</button>
+        <button class="memory-btn" data-msg="Some moments are quiet, but they stay the longest.">Core Memory</button>
+      </div>
+    </section>
+
+    <section class="open">
+      <h2>Open when...</h2>
+      <div class="envelopes">
+        <button data-msg="Hey, ayaw kaayo bug-ati imong heart. Rest lang, breathe lang. I’m proud of you always.">you’re sad</button>
+        <button data-msg="You’re safe with me. You don’t have to overthink your place. I choose you calmly and consistently.">you overthink</button>
+        <button data-msg="Miss tika too. Lowkey lang ko usahay, pero ikaw ra gihapon akong favorite thought.">you miss me</button>
+      </div>
+    </section>
+
+
+    <section class="chapters">
+      <p class="small">Movie Chapters</p>
+      <h2>Our little film</h2>
+      <div class="chapter-grid">
+        <button class="chapter" data-title="Chapter 1 — The Beginning" data-msg="The beginning was simple, pero some simple things become unforgettable.">Chapter 1<br><span>The Beginning</span></button>
+        <button class="chapter" data-title="Chapter 2 — Soft Moments" data-msg="Soft moments are the ones I remember most — the laughs, the silence, and the calm feeling.">Chapter 2<br><span>Soft Moments</span></button>
+        <button class="chapter" data-title="Chapter 3 — Pahinga" data-msg="You became a kind of pahinga I never expected, but deeply appreciate.">Chapter 3<br><span>Pahinga</span></button>
+        <button class="chapter" data-title="Chapter 4 — Always You" data-msg="No matter how many scenes life gives me, my favorite one still feels like you.">Chapter 4<br><span>Always You</span></button>
+      </div>
+    </section>
+
+    <section class="secret-letter">
+      <div class="envelope-3d" id="secretLetter">
+        <div class="flap"></div>
+        <div class="paper-inside">
+          <h2>Secret Letter</h2>
+          <p>Tap to open</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cozy-room">
+      <div class="room-card">
+        <div class="lamp"></div>
+        <div class="window-rain"></div>
+        <h2>Cozy Room Vibe</h2>
+        <p>Warm lights, soft rain, flowers nearby, and one peaceful thought: you.</p>
+      </div>
+    </section>
+
+    <section class="constellation-ending">
+      <div class="constellation-heart">✦ ✧ ✦<br>♡<br>ALWAYS YOU<br>✦ ✧ ✦</div>
+      <p>No matter how far life takes me… my favorite place still feels like you.</p>
+    </section>
+
+    <section class="ending">
+      <p>Sa tinuod lang…</p>
+      <h2>I don’t really know what the future fully looks like yet.</h2>
+      <p>Pero if naa koy one thing nga gusto mahimong constant, ikaw unta to.</p>
+      <p>Not because perfect ka, but because peaceful ka.</p>
+      <p>And in a world nga permi kusog ug gubot… ikaw akong pahinga chaaar pero legit. ♡🌹</p>
+      <div class="final-photo"><img src="assets/photo2.jpg"></div>
+      <button class="glow-btn" onclick="location.reload()">Replay Memories ♡</button>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <button id="closeModal">×</button>
+      <h2>Surprise message ♡</h2>
+      <p id="modalText">If there’s another lifetime, I’d still look for you.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
